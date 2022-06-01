@@ -1,0 +1,36 @@
+
+<html>
+
+	<head> 
+		<title> FÚTBOL MUNDIAL </title>
+    		{% load static %} <link  rel="stylesheet" href="{% static 'css/base.css' %}">
+    		<link href="https://fonts.googleapis.com/css?family=\Source+Sans+Pro:400" rel="stylesheet">
+    		
+	</head>
+	<body style="background-color:#65d6fe;">
+
+	<body>
+    	<div>
+        	<header>
+            	<center>
+            	<div class="nav-left">
+                	<font face="Lucida Calligraphy">
+                	{% load static %}<img src="{% static 'media/img.png' %}" width="75" height="125" align="right" />
+                	<h1><a href="{% url 'home' %}" style="color:#f3f5f2">HABLEMOS DE FÚTBOL</a></h1>
+                	</font>
+                </div>
+            		{% load static %}<img src="{% static 'media/maradona.png' %}" width="756" height="611" />
+                <div class="nav-right">
+                    <font face="Brush Script MT">
+                    <h1><a href="{% url 'post_new' %}" style="color:#13243f">Agregue un nuevo aporte </a> </h1>
+                    </font>
+                </div>    
+        		</center>
+        	</header>
+    	
+    	
+        	{% block content %}
+        	{% endblock content %}
+    	</div>
+	</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends 'base.html '%}
+
+{% block content %}
+<hr width="100%" color="#173aaa"/>
+    <h1> Eliminar post </h1>
+    <form method="post">
+        {% csrf_token %}
+    	<p>Seguro quiere eliminar el comentario: "{{ post.title }}"?</p>	
+    	<input type="submit" value="ELIMINAR">
+	</form>
+	
+{% endblock content %}

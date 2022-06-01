@@ -1,0 +1,13 @@
+<!--POST_NEW-->
+{% extends 'base.html' %}
+{% block content %}
+    <h1> Realice el aporte que crea becesario para este blog </h1>
+    <p> Aquí podrá realizar algún comentario respecto al tema de fútbol en general, ya sean momentos históricos, personajes importantes 
+        equipos de fútbol, etc. La única condición es que el aporte debe ser sobre FÚTBOL. 
+        Puede tomar como guía los comentarios que ya se encuentran en el blog
+    </p>
+    <form action="" method="post"> {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Agregar">
+    </form>
+{% endblock content %}
